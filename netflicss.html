@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>netflicss builder</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css" />
+	<style>
+	h1 {
+		background: url(data:image/png;base64,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) no-repeat 0 0;
+		display: inline-block;
+		width: 144px;
+		height: 46px;
+		font-size: 0px;
+		line-height: 0px;
+	}
+
+	#result {
+		background: #f5f2f0;
+		border: 1px solid rgba(51, 51, 51, 0.12);
+		padding: 1.5em;
+		height: 550px;
+		resize: none;
+		display: block;
+		font-family: monospace;
+		font-size: .8em;
+	}
+
+	h1 + p {
+		margin-bottom: 2em;
+	}
+
+	.grey {
+		background: none !important;
+		margin-top: 3em;
+		color: #cccccc;
+	}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>NETFLICSS</h1>
+		<p>Custom UI generator for Netflix. Use the switches below to select the changes you want, paste the generated CSS in a custom userstyle (eg. using the Stylish plugin).</p>
+		<div class="row">
+			<div class="col s6">
+				<p>Light color theme</p>
+				<div class="switch">
+					<label>Off<input name="lighttheme" autocomplete="off" type="checkbox" /><span class="lever"></span>On</label>
+				</div>
+				<p>Remove "Ways to watch" from the menu</p>
+				<div class="switch">
+					<label>Off<input name="watch" autocomplete="off" type="checkbox" /><span class="lever"></span>On</label>
+				</div>
+				<p>Remove the home slider</p>
+				<div class="switch">
+					<label>Off<input name="homeslider" autocomplete="off" type="checkbox" /><span class="lever"></span>On</label>
+				</div>
+				<p>Notification box padding fix</p>
+				<div class="switch">
+					<label>Off<input name="notificationfix" autocomplete="off" type="checkbox" /><span class="lever"></span>On</label>
+				</div>
+				<p>Disable infos on hover</p>
+				<div class="switch">
+					<label>Off<input name="infos" autocomplete="off" type="checkbox" /><span class="lever"></span>On</label>
+				</div>
+				<p>Disable synopsis on hover</p>
+				<div class="switch">
+					<label>Off<input name="synopsis" autocomplete="off" type="checkbox" /><span class="lever"></span>On</label>
+				</div>
+				<p>Disable ratings on hover</p>
+				<div class="switch">
+					<label>Off<input name="ratings" autocomplete="off" type="checkbox" /><span class="lever"></span>On</label>
+				</div>
+			</div>
+			<div class="col s6"><textarea id="result" spellcheck="off" autocomplete="off"></textarea></div>
+		</div>
+		<p class="grey center">Netflix is a registered trademark. This tool is a third party utility and is unaffiliated with Netflix.</p>
+	</div>
+	<script>
+	var css = {
+		"lighttheme": "\r\n\
+/* Color theme */\r\n\
+body {\r\n\
+	background: #f1f1f1;\r\n\
+}\r\n\
+.akiraHeader {\r\n\
+	background: none;\r\n\
+}\r\n\
+.akiraHeader.head-opaque {\r\n\
+	background: rgba(0, 0, 0, .9);\r\n\
+}\r\n\
+.noResults {\r\n\
+	color: #000000;\r\n\
+}\r\n\
+.rail a {\r\n\
+	color: #000000 !important;\r\n\
+}\r\n\
+.searchTab .icon-search, .searchTab .label, .icon-button-notification {\r\n\
+	color: #000000;\r\n\
+}\r\n\
+.akiraHeader.head-opaque .searchTab .icon-search, .akiraHeader.head-opaque .searchTab .label, .akiraHeader.head-opaque .icon-button-notification {\r\n\
+	color: #ffffff;\r\n\
+}\r\n\
+.akiraHeader .topbar {\r\n\
+	background: rgba(0, 0, 0, .9);\r\n\
+}\r\n\
+.akiraHeader .caret {\r\n\
+	border-color: #000000 transparent transparent !important;\r\n\
+}\r\n\
+.akiraHeader.head-opaque .caret {\r\n\
+	border-color: #ffffff transparent transparent !important;\r\n\
+}\r\n\
+.akiraHeader a[type=\"home\"] + .caret {\r\n\
+ border-color: #e50914 transparent transparent transparent !important;\r\n\
+}\r\n\
+.rowHeader span, .rowTitle, .evidenceLabel {\r\n\
+	color: #000000 !important;\r\n\
+}\r\n\
+.rowHeader span, .rowTitle {\r\n\
+	font-weight: bold !important;\r\n\
+}\r\n\
+",
+
+		"watch": "\r\n\
+/* Remove ways to watch from the menu */\r\n\
+li.browse a[href=\"/Watch\"] {\r\n\
+	display: none !important;\r\n\
+}\r\n\
+",
+
+		"homeslider": "\r\n\
+.billboard-row {\r\n\
+	display: none;\r\n\
+}\r\n\
+.lolomo.is-fullbleed {\r\n\
+	margin-top: 0px !important;\r\n\
+}	\r\n\
+",
+
+		"notificationfix": "\r\n\
+/* Notification padding */\r\n\
+.notifications-container {\r\n\
+	padding-bottom: 1.5em !important;\r\n\
+}\r\n\
+",
+
+		"infos": "\r\n\
+/* Remove meta */\r\n\
+.bob-card .meta {\r\n\
+ 	display: none !important;\r\n\
+}\r\n\
+",
+
+		"synopsis": "\r\n\
+/* Remove synopsis */\r\n\
+.bob-card .synopsis {\r\n\
+	display: none;\r\n\
+}\r\n\
+",
+
+		"ratings": "\r\n\
+/* Remove ratings */\r\n\
+.bob-card .starbar {\r\n\
+	display: none;\r\n\
+}\r\n\
+"
+	};
+
+	$("input[type=checkbox]").on("change", function() {
+		var result = "";
+		$("input[type=checkbox]:checked").each(function(index, el) {
+			result += css[$(el).attr("name")];
+		});
+		$("#result").text(result.trim());
+	});
+	</script>
+</body>
+</html>
